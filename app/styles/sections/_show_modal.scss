@@ -1,0 +1,87 @@
+.lf-dialog {
+  border-radius: 7px;
+  padding: 0;
+  width: 95%;
+  max-width: 600px;
+  padding-bottom: 1em;
+}
+
+.modalz {
+  border-radius: 8px;
+  height: auto!important;
+  background-color: white;
+  width: auto;
+  max-width: 500px;
+  height: auto;
+  color: black;
+  padding-bottom: 14px;
+  .close-modal {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+  }
+}
+.shows-modal {
+  .links {
+    li {
+      margin-right: 16px;
+    }
+  }
+  img.show-top-banner {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .modalz-content { 
+    border: 2px solid white;
+    height: auto; 
+    border-radius: 8px;
+  }
+  .modalz-inner-content {
+    color: black;
+    padding: 1em;
+  }
+  .air_times {
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  .modalz-header {
+    position: relative;
+    text-align: center;
+    background-color: $blue;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .closer {
+      position: absolute;
+      top: -7px;
+      right: -7px;
+
+      a {
+        svg {
+          background-color: black;
+          fill: #FFF;
+        }
+      }
+    }
+    h3 {
+      padding: .5em;
+      margin: 0;
+    }
+  }
+  ul.list-inline {
+    margin: 0;
+    padding: 0;
+    li {
+      padding-left: 0;
+    }
+    a {
+      transition: color .5s;
+      transition: background-color .5s;
+      border-radius: 3px;
+    }
+  }
+}

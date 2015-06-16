@@ -1,0 +1,35 @@
+body { 
+  background-color: $blue; 
+  color: $cream;
+  padding-bottom: 4em;
+}
+a {
+  color: $orange;
+  -webkit-transition: color .5s; /* For Safari 3.1 to 6.0 */
+  transition: color .25s;
+  &:hover{
+    background-color: transparent;
+    color: desaturate($orange, 5%);
+    text-decoration: none;
+  }
+}
+h1 {
+  font-size: 4em;
+  color: #FFFFFF;
+}
+h2 { 
+  font-size: 3em;
+}
+h3 {
+  font-size: 2.5em
+}
+h4 {
+  font-size: 2em;
+}
+h5 {
+  font-size: 1.5em;
+}
+h6 {
+  font-size: 1.25em;
+}
+

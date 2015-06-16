@@ -1,0 +1,9 @@
+<div class="panel-heading">Events</div>
+<div class="panel-body">
+	<ul class="list-unstyled homepage_upcoming_events">
+		{{#each upcomingEvents  key="@guid" as |event|}}
+	    {{event-row event=event}}	
+		{{/each}}
+	</ul>
+	{{#link-to 'events' class="btn btn-primary btn-sm pull-right"}}More{{/link-to}}
+</div>

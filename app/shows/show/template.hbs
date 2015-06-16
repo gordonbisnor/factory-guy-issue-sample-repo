@@ -1,0 +1,16 @@
+<div id="show">
+	{{page-header text=model.show_name}}
+
+	{{#if model.image}}
+		<img src="{{model.image}}" class="img-thumbnail img-responsive pull-left"/>
+	{{/if}}
+
+	{{model.description}}
+
+	<hr />
+
+	{{#link-to 'shows' class="btn btn-default"}}Back{{/link-to}}
+</div>
+
+{{liquid-outlet}}
+

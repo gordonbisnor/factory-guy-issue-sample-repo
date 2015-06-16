@@ -1,0 +1,9 @@
+.event {
+	margin-bottom: 1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid transparentize($brand-primary,0.8);
+  img.event-small {
+  	max-width: 100px;
+  }	
+}

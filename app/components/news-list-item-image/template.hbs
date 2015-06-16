@@ -1,0 +1,5 @@
+{{#if item.image}}
+	{{#link-to 'about.news-item' item}}
+		<img src="{{item.image_thumb}}" alt="" class="img-responsive img-thumbnail-alt media-object" data-item-id="{{item.id}}"/>
+	{{/link-to}}
+{{/if}}

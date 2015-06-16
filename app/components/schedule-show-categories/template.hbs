@@ -1,0 +1,11 @@
+<ul id="show_categories" class="list-inline">
+
+	{{#each categories  key="@guid" as |category|}}
+		<li><a {{action 'selectCategory' category}} href="#" class="{{category.id}}">{{category.title}}</a></li>
+	{{/each}}
+
+	{{#liquid-if filteringByCategory class='filteringByCategory'}}
+		<li><a {{action 'selectCategory' 'view_all'}} href="#" class="view_all">View All</a></li>
+	{{/liquid-if}}
+	
+</ul>

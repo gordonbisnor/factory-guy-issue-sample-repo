@@ -1,0 +1,128 @@
+#popout {
+  a {
+    display: block;
+    background-color: $orange;
+    &:hover {
+      background-color: darken($orange, 3%);
+    }
+    color: $cream;
+    background-image: url('/images/popout.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 37px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
+
+#listen-now {
+  background-color: $orange;
+  margin-bottom: 2em;
+  min-height: 60px;
+  overflow: hidden;
+  width: 100%;
+  &.popout-player {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    height: 200px;
+  }
+  a {
+    color: $cream;
+  }
+  .now-playing {
+    line-height: 58px;
+    vertical-align: middle;
+  }
+  .waveform {
+    background-image: url('/images/waveform.png');
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    background-position: left center;
+  }
+  .area {
+    height: 58px;
+    vertical-align: middle;
+    small {
+      display: block;
+      margin-top: 4px;
+      color: black;
+      font-size: 9px;
+    }
+    .details {
+      line-height: 1.2em;
+      font-size: 10px;
+    }
+    .waveform {
+      margin-right: 0;
+      vertical-align: middle;
+      line-height: 58px;
+    }
+  }
+  .listen-now {
+    padding-top: 10px;
+    height: 58px;
+    padding-left: 73px;
+    background-image: url('/images/loudspeaker.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    &.player-playing {
+      background-image: url('/images/loudpeaker-play.gif');
+    }
+  }
+  .now-playing {
+    .play {
+      display: block;
+      margin-top: 10px;
+      margin-left: 15px;
+      height: 39px;
+      padding-left: 45px;
+      background-repeat: no-repeat;
+      line-height: 39px;
+      &:hover {
+        cursor: pointer;
+      }
+      &.player-stopped {
+        background-image: url('/images/play.png');
+      }
+      &.player-playing {
+        background-image: url('/images/pause.png');
+      }
+      &.player-loading {
+        background-image: url('/images/play-load.GIF');
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  .details, .waveform, .listen-now {
+    display: none;
+  }
+  #newsletter-sign-up, #donate {
+    display: none;
+  }
+  .footer-icon {
+    display: none;
+  }
+  .about-text {
+    display: none;
+  }
+  #popout {
+    display: none;
+  }
+  .carousel {
+    display: none;
+  }
+  .schedule-link {
+    display: none!important;
+  }
+  .header {
+    .right {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<div id="people">
+	<h2 class="about-heading">People</h2>
+	<br />
+	<br />
+	{{#each model  key="@guid"  as |person|}}
+		<div class="person">
+			<div class="media">
+				<div class="pull-left">
+					{{#if person.image}}
+						<img src="{{person.image_medium}}" alt="{{person.name}}" class="media-object img-thumbnail img-responsive"/>
+					{{/if}}
+					<ul class="list list-unstyled contact-details">
+						<li><strong>Phone:</strong> {{person.phone}} ext {{person.extension}}</li>
+						<li><strong>Email:</strong> <a href="mail_to:{{person.email}}">{{person.email}}</a></li>
+					</ul>
+				</div>
+				<div class="media-body">
+					<h3 class="media-heading">{{person.name}}</h3>
+					<h4>{{person.title}}</h4>
+					<div class="content">{{{person.item_content}}}</div>
+				</div>
+			</div>
+		</div>
+		<hr/>
+	{{/each}}
+</div>
+
+{{outlet}}

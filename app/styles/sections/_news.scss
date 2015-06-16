@@ -1,0 +1,18 @@
+.news_item {
+	border-bottom: 1px solid transparentize($brand-primary, 0.8);
+	padding-bottom: 2em;
+	padding-top: 1.5em;
+	margin-top: 0;
+	margin-bottom: 0;
+	.media-heading {
+		margin-top: 0;
+	}
+}
+#news {
+	.media-body {
+		padding-left: 1em;
+	}
+}
+.img-nice {
+  border-radius: 7px;
+}

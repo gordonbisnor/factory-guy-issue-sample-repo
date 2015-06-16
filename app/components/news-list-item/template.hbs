@@ -1,0 +1,27 @@
+<div class="news_item media">
+
+	<div class="pull-right">
+<!--
+		<ul class="pull-right list-unstyled socials">
+			<li>{{facebook-share fb-layout='button' url=urlForItem}}</li>
+			<li>{{twitter-share text=model.twitterShareText via='CKDU881FM' count='none' url=urlForItem}}</li>
+		</ul>
+-->
+	</div>
+
+	<div class="pull-left">
+		{{news-list-item-image item=item}}
+	</div>
+	
+	<div class="media-body">
+		<h3 data-heading-id="{{item.id}}" class="media-heading">
+			{{#link-to 'about.news-item' item}}
+				{{item.title}}
+			{{/link-to}}
+		</h3>
+		<small>{{item.date}}</small>
+		<br /><br />
+		{{{item.item_content}}}
+	</div>
+
+</div>

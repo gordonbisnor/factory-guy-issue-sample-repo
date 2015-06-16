@@ -1,0 +1,80 @@
+$cultural_third_language: desaturate(#DE3F84,20%);
+$jazz_blues: darken(desaturate(#FEDF54,30%),20%);
+$folk_classical: desaturate(#3FD4DE,25%);
+$hip_hop: desaturate(#E61A3D,10%);
+$loud: desaturate(#6E17A6,30%);
+$spoken_word: $orange;
+$eclectic: desaturate(#005CA7,10%);
+$view_all: #333;
+$electronic: darken(desaturate(#3FDE4A,40%),10%);
+
+$colors: (cultural_third_language: $cultural_third_language, jazz_blues: $jazz_blues, folk_classical: $folk_classical, hip_hop: $hip_hop, loud: $loud, spoken_word: $spoken_word, eclectic: $eclectic, view_all: $view_all, electronic: $electronic);
+
+ul#show_list_categories, ul#show_categories, #schedule_container {
+
+  .cultural_third_language {
+    color: $cream;
+    background-color: $cultural_third_language;
+    &:hover { background-color: darken($cultural_third_language,5%); }
+  }
+  .jazz_blues {
+    background-color: $jazz_blues;
+    color: $blue;
+    &:hover { 
+      color: $blue;
+      background-color: darken($jazz_blues,5%); 
+    }
+  }
+
+  .folk_classical {
+    background-color: $folk_classical;
+    color: $blue;
+    &:hover { 
+      color: $blue;
+      background-color: darken($folk_classical,5%); 
+    }
+  }
+
+  .hip_hop {
+    background-color: $hip_hop;
+    color: $cream;
+    &:hover { background-color: darken($hip_hop,5%); }
+  }
+
+  .electronic {
+    background-color: $electronic;
+    color: $cream;
+    &:hover { background-color: darken($electronic,5%); }
+  }
+
+  .loud {
+    background-color: $loud;
+    color: $cream;
+    &:hover { background-color: darken($loud,5%); }
+  }
+
+  .eclectic {
+    background-color: $eclectic;
+    color: $cream;
+    &:hover { background-color: darken($eclectic,5%); }
+  }
+
+  .spoken_word {
+    background-color: $spoken_word;
+    color: $cream;
+    &:hover { background-color: darken($spoken_word,5%); }
+  }
+
+  .view_all {
+    background-color: $view_all;
+    color: $cream;
+  }
+
+}
+
+
+@each $name, $color in $colors {
+  .dot-#{$name}, .show-#{$name} .panel-heading {
+    background-color: $color;
+  }
+}

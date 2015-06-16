@@ -1,0 +1,16 @@
+<div class="carousel">
+	{{#if model.carousel}}
+		{{carousel-panel carousel=model.carousel }}
+	{{/if}}
+	<hr/>
+</div>
+	
+<div class="row">
+	{{#if model.chart}}
+		<div class="col-sm-6">{{chart-panel chart=model.chart}}</div>
+	{{/if}}
+	{{#if model.events}}
+		<div class="col-sm-6">{{event-panel events=model.events}}</div>
+	{{/if}}
+</div>
+

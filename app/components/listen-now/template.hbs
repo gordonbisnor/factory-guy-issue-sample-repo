@@ -1,0 +1,17 @@
+<div id='listen-now' class="{{popoutContainer}}">
+  <div class='container'>
+    <div class='row'>
+    	{{#unless popout}}
+	      <div class="col-sm-2 listen-now area {{playerIsPlaying}}">LISTEN<br/>NOW</div>
+      {{/unless}}
+      <div class='col-sm-3 now-playing area'>{{play-button playerPlaying='playerPlaying' playerStopped='playerStopped' register-as='playButton'}}</div>
+      {{#unless popout}}
+      	{{listen-now-show-info title='Now' item=now}}
+      	{{listen-now-show-info title='Next' item=next}}
+      	{{listen-now-show-info title='Previous' item=previous}}
+      {{/unless}}
+    </div>
+  </div>
+</div>
+
+ 

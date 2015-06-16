@@ -1,0 +1,51 @@
+{{page-header text='Charts'}}
+
+<h2>Chart for {{model.date}}</h2>
+
+<div class="row">
+	<div class="col-sm-8">
+		<table class="table">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Album</th>
+					<th>Artist</th>
+					<th>Label</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each chart_items  key="@guid" as |chart_item|}}
+					<tr>
+						<td>{{chart_item.formatted_position}}</td>
+						<td>{{chart_item.album}}</td>
+						<td>{{chart_item.artist}}</td>
+						<td>{{chart_item.label}}</td>
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h2 class="panel-title">Previous Charts</h2>
+			</div>
+			<div class="panel-body">
+				<ul class="nav nav-pills nav-stacked">
+					{{#each previous_charts  key="@guid" as |chart|}}
+						<li>{{#link-to 'chart' chart}}{{chart.date}}{{/link-to}}</li>
+					{{/each}}
+				</ul>
+				<div class="pull-right">
+					{{#link-to 'charts' class="btn btn-primary"}}View All Charts{{/link-to}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<h2>How To Submit Music</h2>
+		<p>Nulla dui purus, eleifend vel, consequat non, dictum porta, nulla. Duis ante mi, laoreet ut, commodo eleifend, cursus nec, lorem. Aenean eu est. Etiam imperdiet turpis. Praesent nec augue. Curabitur ligula quam, rutrum id, tempor sed, consequat ac, dui. Vestibulum accumsan eros nec magna. Vestibulum vitae dui. Vestibulum nec ligula et lorem consequat ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Phasellus eget nisl ut elit porta ullamcorper.</p>
+		<h2>Other Advice For Musicians</h2>
+		<p>Nulla dui purus, eleifend vel, consequat non, dictum porta, nulla. Duis ante mi, laoreet ut, commodo eleifend, cursus nec, lorem. Aenean eu est. Etiam imperdiet turpis. Praesent nec augue. Curabitur ligula quam, rutrum id, tempor sed, consequat ac, dui. Vestibulum accumsan eros nec magna. Vestibulum vitae dui. Vestibulum nec ligula et lorem consequat ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Phasellus eget nisl ut elit porta ullamcorper.</p>
+	</div>
+</div>
+		
+{{outlet}}

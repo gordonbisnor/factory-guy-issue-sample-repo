@@ -1,0 +1,21 @@
+{{#if isPopout}}
+	{{listen-now playerPlaying='playerPlaying' playerStoped='playerStopped' popout=true}}
+{{else}}
+	<div class='container'>
+	  {{top-nav}}
+	  {{site-header}}
+	  <div class='clearfix'></div>
+	</div>
+	{{pop-out action='openPopout'}}
+	{{listen-now now=currentShow previous=previousShow next=nextShow playerPlaying='playerPlaying' playerStoped='playerStopped'}}
+	<div class='container'>
+	  <div class='clearfix'></div>
+	  <div class='row'>
+	    <div class='col-sm-2'>{{side-column}}</div>
+	    <div class='col-sm-10'>{{liquid-outlet}}</div>
+	  </div>
+	</div>
+	{{site-footer}}
+	{{final-footer}}
+	{{liquid-modal}}
+{{/if}}

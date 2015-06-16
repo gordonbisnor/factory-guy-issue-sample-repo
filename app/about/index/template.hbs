@@ -1,0 +1,6 @@
+<div id="news">
+	<h2 class="about-heading">News</h2>
+	{{#each model key="@guid" as |item|}}
+	  {{news-list-item item=item}}
+	{{/each}}
+</div>

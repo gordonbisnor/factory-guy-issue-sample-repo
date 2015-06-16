@@ -1,0 +1,117 @@
+.footer-icon {
+  margin-top: -6em;
+  margin-bottom: 3em;
+  background-color: $orange;
+  border-color: $cream;
+  border-radius: 63px;
+  border-width: 10px;
+  border-style: solid;
+  width: 126px;
+  height: 126px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  svg {
+    padding-top: 23px;
+    padding-left: 23px;
+    width: 80px;
+    height: 80px;
+  }
+  .icon {
+
+    fill: $cream;
+  }
+}
+
+ul#footer-nav {
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  padding-left: 0;
+  font-size: 1.5em;
+  li {
+    display: inline-block;
+    margin-right: 20px;
+    a {
+      color: $cream;
+      &:hover, &.active {
+        color: $orange;
+      }
+    }
+  }
+}
+
+div#very-bottom {
+ color: $cream; 
+ ul.legals {
+  li {
+    display: inline-block;
+    margin-right: 20px;
+    a {
+      color: $cream;
+      &:hover, &.active {
+        color: $orange;
+      }
+    }
+  }
+ }
+ a.credit {
+  color: $cream;
+  &:hover {
+    color: $orange;
+  }
+ }
+}
+
+#footer-address {
+  &:first-line {
+    color: $blue;
+  }
+  font-size: 2em;
+  a {
+    color: $blue;
+  }
+}
+
+dl#phone-numbers {
+  dt {
+    font-weight: normal;
+    font-size: 1.5em;
+    color: $blue;
+  }
+  dd {
+    font-size: 1.8em;
+  }
+}
+
+#footer {
+  margin-top: 8em;
+  min-height: 415px;
+  background-color: $orange;
+  color: $cream;
+  padding: 2em;
+  padding-bottom: 4em;
+
+  .about-text {
+    font-size: 1.5em;
+    line-height: 1.6em;
+  }
+  .social-links {
+    margin-top: 3em;
+    margin-bottom: 1em;
+    a + a {
+      margin-left: 1em;
+    }
+    a {
+      svg {
+        width: 60px;
+        height:  60px;
+        .icon {
+          fill: $cream; 
+        }
+      }
+      @include transition(opacity .2s ease-in-out);
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}

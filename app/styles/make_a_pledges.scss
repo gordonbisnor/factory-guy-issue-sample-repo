@@ -1,0 +1,101 @@
+$orange: #DF4A3F;
+$blue: #001F37;
+$cream: #FFFCF4;
+$black: #222;
+
+$panel-default-heading-bg: $orange;
+$border-radius-base: 3px;
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/theme";
+
+#make_a_pledge_pages {
+	background-color: transparent!important;
+
+	.btn-orange {
+  background-color: $orange!important;
+  background-image: none;
+  border-color: #bc4809 #bc4809 hsl(21, 90%, 39%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.00);
+  -webkit-font-smoothing: antialiased;
+  &:hover{
+  	background-color: darken($orange,5%)!important;
+  }
+}
+	padding-top: 0;
+  .container {
+    padding-bottom: 60px;
+  }
+  footer {
+    margin-top: 60px;
+    border-top: 1px solid #EEE;
+    padding-right: 3px;
+    padding-top: 7px;
+    text-align: right;
+    color: #BBB;
+    font-size: 11px;
+  }
+  .errors, #stripe_error {
+  	color: #b94a48;
+  	margin-bottom: 1em;
+	}
+	.errors:before {
+  	content: "There were errors:";
+	}
+	.hero-unit {
+		background-color: $orange;
+		color: $cream;
+		text-align: center;
+		padding-top: 3em;
+		padding-bottom: 3em;
+		h2 {
+			margin-bottom: 1em;
+		}
+	}
+	.well {
+		background-color: $cream!important;
+		background-image: none;
+		border-color: lighten($black,90%);
+		-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+		h2 {
+			color: $orange;
+		}
+	}
+	.share {
+		width: 185px;
+		padding-bottom: 7px;
+		margin: auto;
+		height: 20px;
+		background-color: darken($orange, 20%);
+		padding: 14px;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+		border-radius: 7px;
+	}
+	label strong, p strong {
+		color: $orange;
+	}
+	dt {
+		margin-top: 1.5em;
+		color: $orange;
+	}
+	#valid_card, #valid_cvc {
+		margin-left: 7px;
+		margin-top: -10px;
+	}
+	#card_number {
+		background-repeat: no-repeat;
+		background-position: right 3px center;
+	}
+	#ckdu_logo {
+		width: 200px;
+	}
+}
+#make_a_pledge_show_ids_input {
+	.controls > .checkbox:first-child {
+		margin-top: 0!important;
+		padding-top: 0!important;
+	}
+}

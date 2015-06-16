@@ -1,0 +1,20 @@
+
+<div class="panel-heading">Top Ten List For The Week Of {{chart.date}}</div>
+<div class="panel-body">
+	<table class="table">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Album</th>
+				<th>Artist</th>
+				<th>Label</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each chartItems  key="@guid" as |item|}}
+				{{chart-row item=item}}
+			{{/each}}
+		</tbody>
+	</table>
+	{{#link-to 'charts' class="btn btn-primary btn-sm"}}More{{/link-to}}
+</div>

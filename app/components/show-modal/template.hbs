@@ -1,0 +1,48 @@
+<div class="shows-modal">
+  <div  class="modalz-content">
+  
+    <div class="modalz-header">
+      <div class="closer"><a href="#" {{action 'closeModal'}}>{{icon-close}}</a></div>
+      {{#if show.image}}
+        <div class="image">
+          <img src="{{show.image}}" alt="{{show.name}}" class="img-responsive show-top-banner " />
+        </div>
+      {{/if}}
+      <h3>
+        
+        {{show.show_name}}
+      </h3>
+    </div>
+    <div class="modalz-inner-content">
+      <div class="air_times">{{show.air_times}}</div>
+      {{show.host_names}}
+      {{show.description}}
+      <hr />
+      <ul class="pull-right list-unstyled socials">
+        <li>{{facebook-share fb-layout='button'}}</li>
+        <li>{{twitter-share text=show.twitterShareText via='CKDU881FM' count='none'}}</li>
+      </ul>
+      <ul class="list-inline pull-left links">
+        {{#if show.email}}
+          <li>
+            <a href="mailto:{{show.email}}">Contact</a>
+          </li>
+        {{/if}}
+         {{#if show.website}}
+          <li>
+            <a href="{{show.website}}">Website</a>
+          </li>
+        {{/if}}
+        {{#if show.podcast_url}}
+          <li>
+            <a href="{{show.podcast_url}}">Podcast</a>
+          </li>
+        {{/if}}
+      </ul>
+      
+    </div>
+  </div>
+</div>
+
+
+  

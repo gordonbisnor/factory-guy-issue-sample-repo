@@ -1,0 +1,64 @@
+#newsletter-sign-up {
+  background-color: $orange;
+  color: $cream;
+  input {
+    background-color: $cream;
+    color: $orange
+  }
+  input[type="submit"] {
+    &:hover {
+      background-color: darken($cream,5%);
+    }
+  }
+}
+
+#donate {
+  background-color: $cream;
+  color: $orange;
+  h3 {
+    font-size: 1.6em;
+    line-height: 50px;
+  }
+  input {
+    background-color: $orange;
+    color: $cream;
+  }
+  input[type="submit"] {
+    &:hover {
+      background-color: darken($orange,5%);
+    }
+  }
+}
+
+
+.side-box {
+  padding: 1em;
+  border-radius: 12px;
+  position: relative;
+  padding-bottom: 3em;
+  margin-bottom: 2em;
+  .icon {
+    margin-right: 10px;
+  }
+  form {
+    margin-top: 2em;
+  }
+  h3 {
+    font-weight: normal;
+    font-size: 1em;
+    margin-top: 0;
+  }
+  label {
+    font-weight: normal;
+  }
+  input[type='submit'] {
+    border-radius: 5px;
+    border-width: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    position: absolute;
+    bottom: -14px;
+  }
+}

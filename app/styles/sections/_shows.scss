@@ -1,0 +1,42 @@
+/* shows */
+#shows {
+  .panel-heading {
+    background-image: none!important;
+  }
+  .narrow-show {
+    min-height: 200px;
+    .panel-heading {
+      min-height: 60px;
+    }
+  }
+}
+.show:hover {
+  .panel-body, .panel-heading {
+    cursor: pointer!important;
+    background-image: none!important;
+  }
+}
+/* end shows */
+
+
+#show_list_categories {
+  margin-bottom: 1em;
+  li {
+    padding: 7px;
+    line-height: 16px;
+    vertical-align: top;
+    border-radius: 3px;
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($blue, 10%);
+    }
+  }
+
+}
+.dot {
+  display: inline-block;
+  width:  10px;
+  height: 10px;
+  border-radius: 5px;
+  margin-right: 2px;
+}

@@ -1,0 +1,20 @@
+{{#each model key="@guid" as |item|}}
+	<div class="event">
+		<div class="media">
+			<div class="pull-left">
+				{{#if item.image}}
+					{{#link-to 'events.event' item}}
+		  			<img src="{{item.image_thumb}}" alt="" class="img-responsive img-thumbnail-alt media-object event-small" data-event-id="{{item.id}}"/>
+	  			{{/link-to}}
+		  	{{/if}}
+			</div>
+			<div class="media-body">
+				<h3 data-heading-id="{{item.id}}" class="media-heading">{{#link-to 'events.event' item}}{{item.title}}{{/link-to}}</h3>
+				<small>{{item.formattedDate}}</small>
+				{{{item.event_content}}}
+			</div>
+		</div>
+	</div>
+{{else}}
+	There are no events listed.
+{{/each}}

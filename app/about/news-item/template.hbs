@@ -1,0 +1,27 @@
+<h2 data-heading-id="{{model.id}}" class="media-heading">{{model.title}}</h2>
+<small>{{model.date}}</small>
+
+<div class="media">
+	
+	<ul class="pull-right list-unstyled socials">
+		<li>{{facebook-share fb-layout='button'}}</li>
+		<li>{{twitter-share text=model.twitterShareText via='CKDU881FM' count='none'}}</li>
+	</ul>
+	
+	<div class="pull-left">
+		{{#if model.image}}
+  		<img src="{{model.image_medium}}" alt="" class="img-responsive img-thumbnail-alt  media-object" data-item-id="{{model.id}}"/>
+  	{{/if}}
+	</div>
+
+	<div class="media-body">
+		{{{content}}}
+	</div>
+
+</div>
+
+<br />
+<br />
+<p>
+	{{#link-to 'about' class="btn btn-primary btn-sm"}}Back{{/link-to}}
+</p>

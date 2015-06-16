@@ -1,0 +1,27 @@
+<div id="shows">
+	{{page-header text='Shows'}}
+
+	<ul class="list-inline" id="show_list_categories">
+		{{#each categories key="@guid" as |category|}}
+			<li {{action 'showCategory' category.id}}><div class="dot {{category.id}}"></div> {{category.title}}</li>
+		{{/each}}
+		{{#liquid-if filteringByCategory class='filteringByCategory'}}
+			<li {{action 'showCategory' 'view_all'}}><div class="dot view_all"></div> View All</li>
+		{{/liquid-if}}  
+	</ul>
+
+	<div class="clearfix"></div>
+
+	<div class="row">
+		{{#each model  key="@guid" as |show|}}
+				<div class="col-xs-6 col-sm-4 col-md-3 show-{{unbound show.color}}" {{action 'openShowModal' show.id}} data-category="{{unbound show.color}}" data-target='show'>
+					<div class="panel panel-default show narrow-show" keyboard="true">
+						<div class="panel-heading color">{{show.show_name}}</div>
+						<div class="panel-body">{{show.short_description}}</div>
+					</div>
+				</div>
+		{{/each}}
+	</div>
+</div>
+
+{{outlet}}

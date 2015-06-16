@@ -1,0 +1,20 @@
+<div>
+	<div class="page-header">
+		<h1>About</h1>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">
+			<ul class="nav nav-stacked">
+				<li>{{#link-to 'about.index'}}About{{/link-to}}</li>
+				<li>{{#link-to 'about.people'}}People{{/link-to}}</li>
+				<li>{{#link-to 'about.history'}}History{{/link-to}}</li>
+				<li>{{#link-to 'about.advertising-with-ckdu'}}Advertising with CKDU{{/link-to}}</li>
+				<li>{{#link-to 'about.policies-and-training'}}Policies &amp; Training{{/link-to}}</li>
+				<li>{{#link-to 'about.faq'}}Frequently Asked Questions{{/link-to}}</li>
+			</ul>
+		</div>	
+		<div class="col-sm-10" id="about-section-content">
+			{{liquid-outlet}}
+		</div>
+	</div>
+</div>

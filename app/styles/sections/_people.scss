@@ -1,0 +1,23 @@
+#people {
+	.person {
+		ul.contact-details {
+			margin-top: 1em;
+			li {
+				margin-bottom: .5em;
+			}
+		}
+		.media-body {
+			padding-left: 1em;
+			.content {
+				margin-top: 2em;
+			}
+			h2.media-heading {
+				margin-bottom: 0;
+			}
+			h2.media-heading + h3 {
+				margin-top: 0;
+				color: $orange;
+			}
+		}
+	}
+}

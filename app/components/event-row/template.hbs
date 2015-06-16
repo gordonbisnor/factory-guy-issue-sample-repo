@@ -1,0 +1,14 @@
+<div class="media">
+	<div class="pull-left">
+		{{#if event.image_thumb}}
+			<img src="{{event.image_thumb}}" alt="" class="img-thumbnail img-responsive"/>
+		{{/if}}
+	</div>
+	<div class="media-body">
+		<h6 class="media-heading">{{event.formattedDate}}</h6>
+		<h6>{{#link-to 'events.event' event}}{{event.title}}{{/link-to}}</h6>
+	</div>
+</div>
+
+
+        

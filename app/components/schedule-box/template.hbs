@@ -1,0 +1,21 @@
+<div id="schedule_container">
+	<div id="schedule" class="schedule">
+		<div class="day pull-left">
+			{{#each schedule.timesOfDay key="@index" as |time|}}
+				{{time-box time=time}}
+			{{/each}}
+		</div>
+
+		<div class="time-slots-area" id="time-slots-area">
+			
+			{{#each schedule.timeSlots key="@guid" as |slot|}}
+				{{time-slot slot=slot action='openShowModal'}}
+			{{/each}}				
+			
+			{{#each schedule.twentyTimes key="@guid" as |time|}}
+				{{key-line}}
+			{{/each}}
+
+		</div>
+	</div>
+</div>

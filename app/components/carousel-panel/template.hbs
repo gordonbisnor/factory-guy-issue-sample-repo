@@ -1,0 +1,13 @@
+<div class="carousel_container">
+	<ul class="list-unstyled">
+		{{#each carouselItems  key="@guid" as |item|}}
+			{{carousel-item item=item}}
+		{{/each}}
+	</ul>
+</div>
+<hr/>
+<div class="carousel_pagination">
+	{{#each carouselItems  key="@guid" as |item|}}
+		<a href="#" data-carousel-target="{{unbound item.id}}">•</a>
+	{{/each}}
+</div>

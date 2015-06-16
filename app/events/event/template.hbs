@@ -1,0 +1,22 @@
+<div class="media">
+	<ul class="pull-right list-unstyled socials">
+		<li>{{facebook-share fb-layout='button'}}</li>
+		<li>{{twitter-share text=event.twitterShareText via='CKDU881FM' count='none'}}</li>
+	</ul>
+	<div class="pull-left">
+		{{#if model.image}}
+  		<img src="{{model.image_medium}}" alt="" class="img-responsive img-thumbnail-alt  media-object" data-event-id="{{model.id}}"/>
+  	{{/if}}
+	</div>
+	<div class="media-body">
+		<h2 data-heading-id="{{model.id}}" class="media-heading">{{model.title}}</h2>
+		<h6>{{model.formattedDate}}</h6>
+		{{{model.item_content}}}
+	</div>
+</div>
+
+<br /><br />
+
+{{#link-to 'events' class='icon btn btn-primary btn-sm'}}Back{{/link-to}}
+
+{{liquid-outlet}}

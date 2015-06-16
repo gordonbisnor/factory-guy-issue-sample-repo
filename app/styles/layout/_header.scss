@@ -1,0 +1,42 @@
+.header {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  .logotype {
+    font-size: 2.5em;
+    text-align: right;
+    strong {
+      color: $orange;
+    }
+  }
+  a.ckdu-logo {
+    margin: 0;
+    padding: 0;
+  	svg {
+      display: inline-block;
+      overflow: hidden;
+      float: left;
+      margin: 0;
+      padding: 0;
+  		max-width: 380px;
+  	}
+  }
+ .social-links {
+    padding-top: 1.5em;
+    a + a {
+      margin-left: 1em;
+    }
+    a {
+      svg {
+        width: 28px;
+        height:  28px;
+        .icon {
+          fill: $cream; 
+        }
+      }
+      @include transition(opacity .2s ease-in-out);
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}

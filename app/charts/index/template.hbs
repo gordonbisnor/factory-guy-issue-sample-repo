@@ -1,0 +1,9 @@
+{{page-header text='Charts'}}
+
+<ul class="list-unstyled">
+	{{#each model  key="@guid"  as |chart|}}
+		<li>{{#link-to 'charts.chart' chart}}{{chart.date}}{{/link-to}}<hr/></li>
+	{{/each}}
+</ul>	
+
+{{outlet}}
